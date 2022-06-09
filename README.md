@@ -16,6 +16,7 @@ There are two game modes to choose from.
 ## Tools Use
 + Visual Studio Code -開發環境
 +  Sass -編譯器
++  [ztext.js](https://bennettfeely.com/ztext/) -JS library
 ## Makes the game better
 It's the simple initial project of the Tic-Tac-Toe game.\
 However, I would like to improve the game in some ways as below :  
