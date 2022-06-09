@@ -1,0 +1,51 @@
+// CSS Variable
+:root {
+  --color-primary: #df1ab4;
+  --color-secondary: #033e96;
+  --color-third: #009688;
+  --color-fourth: #02C9AF;
+
+  --color-background-dark: #011034;
+  --color-background-light: #2B4F8D;
+
+  --color-player-background: hsl(313, 80%, 60%, 50%);
+  --color-player-background-1: hsl(222, 96%, 10%, 60%);
+
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  --shadow-dark: 0 2rem 3rem rgb(12, 12, 12, 0.5);
+}
+
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Passion One',
+    cursive, 'Source Sans Pro',
+    sans-serif;
+  ;
+  font-size: 10px;
+  // line-height: 1.6;
+  color: var(--color-grey-light-1);
+  background-image: linear-gradient(to right bottom, var(--color-background-light), var(--color-background-dark));
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}

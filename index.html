@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/css_dir/main.css">
+  <title>Tic Tac Toe</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 遊戲封面 -->
+    <div class="gameCover" id="gameCover">
+      <section class="gameCover__page">
+        <div class="gameCover__title">
+          <h1 class="gameCover__title--tic">
+            <span data-z data-z-layers="25" data-z-depth="80px">Tic</span>
+          </h1>
+          <h1 class="gameCover__title--tac">
+            <span data-z data-z-layers="25" data-z-depth="80px">Tac</span>
+          </h1>
+          <h1 class="gameCover__title--toe">
+            <span data-z data-z-layers="25" data-z-depth="80px">Toe</span>
+          </h1>
+        </div>
+
+        <div class="gameCover__playerChosen">
+          <a href="#"><button class="gameCover__playerChosen--single btn" data-mode="single">SinglePlayer
+            </button></a>
+          <a href="#"><button class="gameCover__playerChosen--multi btn" data-mode="multi">MultiPlayer
+            </button></a>
+        </div>
+      </section>
+
+      <!-- ICON選擇 -->
+      <section class="iconChoose">
+        <div class="iconChoose__page">
+          <a class="iconChoose__close" data-home="home">&times;</a>
+          <div class="iconChoose__circlePart">
+            <span data-z data-z-layers="25" data-z-depth="0.5em" class="iconChoose__circlePart--circle">O</span>
+            <button class="iconChoose__circlePart--btn" data-icon="circle">Circle</button>
+          </div>
+          <h3>OR</h3>
+          <div class="iconChoose__forkPart">
+            <span data-z data-z-layers="25" data-z-depth="0.5em" class="iconChoose__forkPart--fork">X</span>
+            <button class="iconChoose__forkPart--btn" data-icon="fork">fork</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 遊戲模式(單人/雙人) -->
+      <section id="player_mode" class="playerMode">
+        <div class="playerMode__page">
+          <table class="playerMode__table">
+            <tr>
+              <td data-index="1" class="playerMode__table--cell"></td>
+              <td data-index="2" class="playerMode__table--cell"></td>
+              <td data-index="3" class="playerMode__table--cell"></td>
+            </tr>
+            <tr>
+              <td data-index="4" class="playerMode__table--cell"></td>
+              <td data-index="5" class="playerMode__table--cell"></td>
+              <td data-index="6" class="playerMode__table--cell"></td>
+            </tr>
+            <tr>
+              <td data-index="7" class="playerMode__table--cell"></td>
+              <td data-index="8" class="playerMode__table--cell"></td>
+              <td data-index="9" class="playerMode__table--cell"></td>
+            </tr>
+          </table>
+          <div class="playerMode__whoseTurn">
+            <div class="playerMode__whoseTurn--player">Player <span>X</span>'s turn</div>
+            <button class="btn" data-home="home">Back to Home</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+
+  <!-- 3D立體套件 -->
+  <script src="./path/ztext.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>

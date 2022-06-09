@@ -1,0 +1,105 @@
+////////////////////////////////
+//ICON選擇
+.iconChoose {
+  padding: 3rem 4rem;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-player-background);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  transition: transform 1s ease;
+
+  &__page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    height: 100%;
+    min-width: 5rem;
+    padding: 2rem 4rem;
+    background-color: var(--color-grey-light-4);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-dark);
+  }
+
+  &__circlePart,
+  &__forkPart {
+    width: 100%;
+    height: 100%;
+    font-size: 12rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &--circle,
+    &--fork {
+      color: var(--color-third);
+    }
+
+    &--btn {
+      border: none;
+      border-radius: 1rem;
+      width: 4rem;
+      padding: 0.5rem;
+      margin: 0 auto;
+      background-color: var(--color-third);
+      color: var(--color-grey-light-1);
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &--btn:hover {
+      box-shadow: var(--shadow-dark);
+      background-color: var(--color-secondary);
+      cursor: pointer;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 1.5rem;
+    right: 3rem;
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-third);
+      cursor: pointer;
+    }
+  }
+
+  h3 {
+    font-size: 5rem;
+    font-family: 'Passion One',
+      cursive,
+      'Source Sans Pro',
+      sans-serif;
+    color: var(--color-third);
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: $bp-smallest) {
+  .iconChoose {
+    &__page {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__circlePart,
+    &__forkPart {
+      font-size: 9rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+  }
+}

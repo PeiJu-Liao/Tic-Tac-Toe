@@ -1,0 +1,28 @@
+.btn {
+  display: block;
+  border: none;
+  min-width: 5rem;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  margin: 0 auto;
+  letter-spacing: 0.3rem;
+  color: var(--color-grey-light-4);
+
+  &:first-child {
+    margin-bottom: 1rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: var(--shadow-dark);
+  }
+
+  &:visited,
+  &:focus {
+    transform: translateY(0.2rem) scale(1.05);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}

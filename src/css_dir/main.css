@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@700&family=Source+Sans+Pro:wght@300&display=swap");
+.banner {
+  width: 100%;
+  text-align: center;
+  height: 100vh;
+  background-color: var(--color-player-background-1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: showBanner 1.5s ease;
+}
+.banner h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+}
+.banner h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5rem;
+}
+.banner button {
+  background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+}
+
+@keyframes showBanner {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+:root {
+  --color-primary: #df1ab4;
+  --color-secondary: #033e96;
+  --color-third: #009688;
+  --color-fourth: #02C9AF;
+  --color-background-dark: #011034;
+  --color-background-light: #2B4F8D;
+  --color-player-background: hsl(313, 80%, 60%, 50%);
+  --color-player-background-1: hsl(222, 96%, 10%, 60%);
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+  --shadow-dark: 0 2rem 3rem rgb(12, 12, 12, 0.5);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Passion One", cursive, "Source Sans Pro", sans-serif;
+  font-size: 10px;
+  color: var(--color-grey-light-1);
+  background-image: linear-gradient(to right bottom, var(--color-background-light), var(--color-background-dark));
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: block;
+  border: none;
+  min-width: 5rem;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  margin: 0 auto;
+  letter-spacing: 0.3rem;
+  color: var(--color-grey-light-4);
+}
+.btn:first-child {
+  margin-bottom: 1rem;
+}
+.btn:hover {
+  cursor: pointer;
+  box-shadow: var(--shadow-dark);
+}
+.btn:visited, .btn:focus {
+  transform: translateY(0.2rem) scale(1.05);
+}
+.btn:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.gameCover {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  visibility: visible;
+}
+.gameCover__page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+  min-width: 6rem;
+  padding: 2rem 3rem;
+  margin: 0 auto;
+  border: 0.8rem double var(--color-primary);
+}
+.gameCover__title {
+  text-transform: uppercase;
+  font-family: "Passion One", cursive, "Source Sans Pro", sans-serif;
+  letter-spacing: 0.8rem;
+  font-size: 4rem;
+}
+.gameCover__playerChosen {
+  padding: 1rem;
+}
+.gameCover__playerChosen--single {
+  background-image: linear-gradient(to right, #e7345b, var(--color-secondary));
+}
+.gameCover__playerChosen--multi {
+  background-image: linear-gradient(to left, #cc3265, var(--color-secondary));
+}
+
+h1 {
+  color: var(--color-primary);
+}
+
+.z-text {
+  transform: rotateX(20deg) rotateY(-15deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+[data-z]:hover .z-text {
+  transform: rotateX(0deg) rotateY(0deg);
+}
+
+.z-layer:not(:first-child) {
+  color: var(--color-secondary);
+}
+
+@media screen and (max-width: 37.5em) {
+  .gameCover__page {
+    flex-direction: column;
+  }
+}
+.iconChoose {
+  padding: 3rem 4rem;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-player-background);
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  transition: transform 1s ease;
+}
+.iconChoose__page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  min-width: 5rem;
+  padding: 2rem 4rem;
+  background-color: var(--color-grey-light-4);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-dark);
+}
+.iconChoose__circlePart, .iconChoose__forkPart {
+  width: 100%;
+  height: 100%;
+  font-size: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.iconChoose__circlePart--circle, .iconChoose__circlePart--fork, .iconChoose__forkPart--circle, .iconChoose__forkPart--fork {
+  color: var(--color-third);
+}
+.iconChoose__circlePart--btn, .iconChoose__forkPart--btn {
+  border: none;
+  border-radius: 1rem;
+  width: 4rem;
+  padding: 0.5rem;
+  margin: 0 auto;
+  background-color: var(--color-third);
+  color: var(--color-grey-light-1);
+  text-transform: uppercase;
+  text-align: center;
+}
+.iconChoose__circlePart--btn:hover, .iconChoose__forkPart--btn:hover {
+  box-shadow: var(--shadow-dark);
+  background-color: var(--color-secondary);
+  cursor: pointer;
+}
+.iconChoose__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 3rem;
+  font-size: 2.5rem;
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+.iconChoose__close:hover {
+  color: var(--color-third);
+  cursor: pointer;
+}
+.iconChoose h3 {
+  font-size: 5rem;
+  font-family: "Passion One", cursive, "Source Sans Pro", sans-serif;
+  color: var(--color-third);
+  text-align: center;
+}
+
+@media screen and (max-width: 31.25em) {
+  .iconChoose__page {
+    display: flex;
+    flex-direction: column;
+  }
+  .iconChoose__circlePart, .iconChoose__forkPart {
+    font-size: 9rem;
+  }
+  .iconChoose h3 {
+    font-size: 2rem;
+  }
+}
+.container {
+  min-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.playerMode {
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-player-background);
+  pointer-events: auto;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+.playerMode__page {
+  height: 100%;
+  width: 80%;
+  min-width: 5rem;
+  padding: 2rem 4rem;
+  background-color: var(--color-grey-light-4);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.playerMode__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-right: 1rem;
+}
+.playerMode__table tr td {
+  height: 9em;
+  width: 9em;
+  text-align: center;
+}
+.playerMode__table tr td:not(:last-child) {
+  border-right: 0.6rem solid var(--color-third);
+}
+.playerMode__table tr:not(:last-child) td {
+  border-bottom: 0.6rem solid var(--color-third);
+}
+.playerMode__table--circle, .playerMode__table--fork {
+  font-size: 10vw;
+  color: var(--color-secondary);
+}
+.playerMode__whoseTurn {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.playerMode__whoseTurn--player {
+  font-size: 2rem;
+  color: var(--color-secondary);
+}
+.playerMode__whoseTurn--player span {
+  font-size: 3.5rem;
+  color: var(--color-third);
+}
+.playerMode__whoseTurn button {
+  background-image: linear-gradient(to right, var(--color-secondary), var(--color-third));
+}
+
+.winner-animation {
+  animation: winnerStyle 0.5s 5;
+}
+
+@keyframes winnerStyle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+@media (max-width: 31.25em) {
+  .playerMode__table {
+    margin-bottom: 2rem;
+    margin-right: 0;
+  }
+  .playerMode__table tr td {
+    height: 5rem;
+    width: 5rem;
+  }
+  .playerMode__page {
+    width: 100%;
+    flex-direction: column;
+  }
+  .playerMode__whoseTurn {
+    width: 100%;
+  }
+  .playerMode__whoseTurn--player {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
