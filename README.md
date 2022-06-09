@@ -1,6 +1,6 @@
 # Tic-Tac-Toe
 A simple game which is created by JavaScript.\
-Check [Here](https://github.com/PeiJu-Liao/Tic-Tac-Toe-) to play the game.😉
+Check [Here](https://peiju-liao.github.io/Tic-Tac-Toe/) to play the game.😉
 ## Game Rules
 Tic-Tac-Toe game is played on 3X3 grid.\
 The player can only play the chess on the grid.\
