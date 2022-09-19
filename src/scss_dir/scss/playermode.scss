@@ -1,7 +1,7 @@
 ////////////////////////////////
 //遊戲模式
 .playerMode {
-  padding: 2rem;
+  padding: 1.5rem;
   width: 100%;
   height: 100%;
   background-color: var(--color-player-background);
@@ -18,10 +18,9 @@
   // transition: transform 1s cubic-bezier(.21, 1.93, .53, 0.64); //彈跳效果
 
   &__page {
-    height: 100%;
-    width: 80%;
+    width: 70%;
     min-width: 5rem;
-    padding: 2rem 4rem;
+    padding: 2rem 0.5rem;
     background-color: var(--color-grey-light-4);
     border-radius: 1rem;
     box-shadow: var(--shadow-dark);
@@ -31,14 +30,20 @@
     align-items: center;
   }
 
+  &__tablewrap {
+    width: 60%;
+  }
+
   &__table {
     width: 100%;
+    max-width: 300px;
+    min-height: 300px;
     border-collapse: collapse;
-    margin-right: 1rem;
+    margin: 0 auto;
 
     tr td {
-      height: 9em;
-      width: 9em;
+      height: 10em;
+      width: 10em;
       text-align: center;
     }
 
@@ -52,14 +57,16 @@
 
     &--circle,
     &--fork {
-      font-size: 10vw;
+      display: inline-block;
+      width: 100%;
+      font-size: 3rem;
       color: var(--color-secondary);
     }
   }
 
   // 右半邊
   &__whoseTurn {
-    width: 100%;
+    width: 40%;
     margin: 0 auto;
     text-align: center;
 
@@ -95,13 +102,13 @@
   }
 }
 
-// 600px 
-@media (max-width:$bp-smallest) {
+@media (max-width:$bp-small) {
   .playerMode {
-    &__table {
-      margin-bottom: 2rem;
-      margin-right: 0;
+    &__tablewrap {
+      width: 100%;
+    }
 
+    &__table {
       tr td {
         height: 5rem;
         width: 5rem;
@@ -110,15 +117,13 @@
 
     &__page {
       width: 100%;
+      align-items: center;
       flex-direction: column;
     }
 
+
     &__whoseTurn {
       width: 100%;
-
-      &--player {
-        font-size: 1rem;
-      }
     }
   }
 }

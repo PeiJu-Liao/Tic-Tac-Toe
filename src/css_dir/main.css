@@ -67,6 +67,11 @@ body {
   min-height: 100vh;
 }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -147,7 +152,7 @@ h1 {
   color: var(--color-secondary);
 }
 
-@media screen and (max-width: 37.5em) {
+@media screen and (max-width: 576px) {
   .gameCover__page {
     flex-direction: column;
   }
@@ -222,7 +227,7 @@ h1 {
   text-align: center;
 }
 
-@media screen and (max-width: 31.25em) {
+@media screen and (max-width: 576px) {
   .iconChoose__page {
     display: flex;
     flex-direction: column;
@@ -243,7 +248,7 @@ h1 {
 }
 
 .playerMode {
-  padding: 2rem;
+  padding: 1.5rem;
   width: 100%;
   height: 100%;
   background-color: var(--color-player-background);
@@ -256,10 +261,9 @@ h1 {
   visibility: hidden;
 }
 .playerMode__page {
-  height: 100%;
-  width: 80%;
+  width: 70%;
   min-width: 5rem;
-  padding: 2rem 4rem;
+  padding: 2rem 0.5rem;
   background-color: var(--color-grey-light-4);
   border-radius: 1rem;
   box-shadow: var(--shadow-dark);
@@ -267,14 +271,19 @@ h1 {
   justify-content: center;
   align-items: center;
 }
+.playerMode__tablewrap {
+  width: 60%;
+}
 .playerMode__table {
   width: 100%;
+  max-width: 300px;
+  min-height: 300px;
   border-collapse: collapse;
-  margin-right: 1rem;
+  margin: 0 auto;
 }
 .playerMode__table tr td {
-  height: 9em;
-  width: 9em;
+  height: 10em;
+  width: 10em;
   text-align: center;
 }
 .playerMode__table tr td:not(:last-child) {
@@ -284,11 +293,13 @@ h1 {
   border-bottom: 0.6rem solid var(--color-third);
 }
 .playerMode__table--circle, .playerMode__table--fork {
-  font-size: 10vw;
+  display: inline-block;
+  width: 100%;
+  font-size: 3rem;
   color: var(--color-secondary);
 }
 .playerMode__whoseTurn {
-  width: 100%;
+  width: 40%;
   margin: 0 auto;
   text-align: center;
 }
@@ -317,10 +328,9 @@ h1 {
     transform: scale(1.5);
   }
 }
-@media (max-width: 31.25em) {
-  .playerMode__table {
-    margin-bottom: 2rem;
-    margin-right: 0;
+@media (max-width: 768px) {
+  .playerMode__tablewrap {
+    width: 100%;
   }
   .playerMode__table tr td {
     height: 5rem;
@@ -328,13 +338,11 @@ h1 {
   }
   .playerMode__page {
     width: 100%;
+    align-items: center;
     flex-direction: column;
   }
   .playerMode__whoseTurn {
     width: 100%;
-  }
-  .playerMode__whoseTurn--player {
-    font-size: 1rem;
   }
 }
 

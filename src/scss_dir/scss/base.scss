@@ -23,9 +23,6 @@
   --shadow-dark: 0 2rem 3rem rgb(12, 12, 12, 0.5);
 }
 
-$bp-small: 37.5em; // 600px
-$bp-smallest: 31.25em; // 500px
-
 *,
 *::after,
 *::before {
@@ -40,12 +37,19 @@ body {
     sans-serif;
   ;
   font-size: 10px;
-  // line-height: 1.6;
   color: var(--color-grey-light-1);
   background-image: linear-gradient(to right bottom, var(--color-background-light), var(--color-background-dark));
   min-height: 100vh;
 }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 a {
   text-decoration: none;
 }
+
+$bp-small: 768px;
+$bp-smallest: 576px;

@@ -62,7 +62,7 @@ h1 {
   color: var(--color-secondary);
 }
 
-@media screen and (max-width: $bp-small) {
+@media screen and (max-width: $bp-smallest) {
   .gameCover__page {
     flex-direction: column;
   }
