@@ -22,6 +22,6 @@ It's the simple initial project of the Tic-Tac-Toe game.\
 However, I would like to improve the game in some ways as below :  
 * Make the diffculty classifications of game.(easy/medium/hard)
 * More CSS animation.(ex:screen fade in/fade out...)
-* Maybe the player character selection before the gane start.
+* Player character selection before the game start.
 ## Contributor 
 > [Peiju Liao](https://github.com/PeiJu-Liao)
